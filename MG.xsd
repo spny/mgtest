@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:a="http://langdale.com.au/2005/Message#" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" targetNamespace="http://iec.ch/TC57/2007/profile#" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://langdale.com.au/2005/Message#" xmlns:m="http://iec.ch/TC57/2007/profile#">
+<xs:annotation/>
+<xs:complexType name="AccessPoint" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#AccessPoint">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="Address" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Address">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="Authentication" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Authentication">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="BDA" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#BDA">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="Bay" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Bay">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="BitRate" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#BitRate">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="Communication" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Communication">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="ComplexTypeClass1" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#ComplexTypeClass1">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="ConductingEquipment" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#ConductingEquipment">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="ConfDataSet" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#ConfDataSet">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="ConnectedAP" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#ConnectedAP">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="ConnectivityNode" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#ConnectivityNode">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="DA" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DA">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="DAI" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DAI">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="DAType" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DAType">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="DO" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DO">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="DOI" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DOI">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="DOType" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DOType">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="DataTypeTemplates" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DataTypeTemplates">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="EARootClass" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#EARootClass">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="EnumType" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#EnumType">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="EnumVal" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#EnumVal">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="IED" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IED">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="LDevice" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#LDevice">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="LN" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#LN">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="LN0" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#LN0">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="LNode" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#LNode">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="LNodeType" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#LNodeType">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="P" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#P">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="Package" sawsdl:modelReference="http://langdale.com.au/2005/UML#Package">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="Private" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Private">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="ReportSettings" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#ReportSettings">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="SCL" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#SCL">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="Server" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Server">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="Services" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Services">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="Stereotype" sawsdl:modelReference="http://langdale.com.au/2005/UML#Stereotype">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="SubNetwork" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#SubNetwork">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="Substation" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Substation">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="Terminal" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Terminal">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="VoltageLevel" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#VoltageLevel">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="normalizedString" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#normalizedString">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#string">
+<xs:annotation/>
+<xs:sequence/>
+</xs:complexType>
+</xs:schema>
