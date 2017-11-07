@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.iec.ch/61850/2003/SCL"
+	elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://www.iec.ch/61850/2003/SCL">
+	<xsd:element name="SCL">
+		<xsd:complexType mixed="true">
+			<xsd:sequence>
+				<xsd:element name="Substation" minOccurs="0">
+					<xsd:complexType mixed="true">
+						<xsd:sequence>
+							<xsd:element name="Private" minOccurs="0">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute name="lNodeContainerId" type="xsd:int"
+												use="required" />
+											<xsd:attribute name="equipmentContainerId"
+												type="xsd:int" use="required" />
+											<xsd:attribute name="psrId" type="xsd:int" use="required" />
+											<xsd:attribute name="substationId" type="xsd:int"
+												use="required" />
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="VoltageLevel" maxOccurs="unbounded">
+								<xsd:complexType mixed="true">
+									<xsd:sequence>
+										<xsd:element name="Private" minOccurs="0">
+											<xsd:complexType>
+												<xsd:simpleContent>
+													<xsd:extension base="xsd:string">
+														<xsd:attribute name="lNodeContainerId" type="xsd:int"
+															use="required" />
+														<xsd:attribute name="voltageLevelId" type="xsd:int"
+															use="required" />
+														<xsd:attribute name="equipmentContainerId"
+															type="xsd:int" use="required" />
+														<xsd:attribute name="psrId" type="xsd:int"
+															use="required" />
+														<xsd:attribute name="substationId" type="xsd:int"
+															use="required" />
+													</xsd:extension>
+												</xsd:simpleContent>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="Bay" maxOccurs="unbounded">
+											<xsd:complexType mixed="true">
+												<xsd:sequence>
+													<xsd:element name="Private" minOccurs="0">
+														<xsd:complexType>
+															<xsd:simpleContent>
+																<xsd:extension base="xsd:string">
+																	<xsd:attribute name="lNodeContainerId"
+																		type="xsd:int" use="required" />
+																	<xsd:attribute name="voltageLevelId"
+																		type="xsd:int" use="required" />
+																	<xsd:attribute name="equipmentContainerId"
+																		type="xsd:int" use="required" />
+																	<xsd:attribute name="bayId" type="xsd:int"
+																		use="required" />
+																	<xsd:attribute name="psrId" type="xsd:int"
+																		use="required" />
+																</xsd:extension>
+															</xsd:simpleContent>
+														</xsd:complexType>
+													</xsd:element>
+													<xsd:element name="ConductingEquipment"
+														maxOccurs="unbounded">
+														<xsd:complexType mixed="true">
+															<xsd:sequence>
+																<xsd:element name="Private" minOccurs="0">
+																	<xsd:complexType>
+																		<xsd:simpleContent>
+																			<xsd:extension base="xsd:string">
+																				<xsd:attribute name="abstractConductingEquipmentId"
+																					type="xsd:int" use="required" />
+																				<xsd:attribute name="conductingEquipmentId"
+																					type="xsd:int" use="required" />
+																				<xsd:attribute name="lNodeContainerId"
+																					type="xsd:int" use="required" />
+																				<xsd:attribute name="bayId" type="xsd:int"
+																					use="required" />
+																				<xsd:attribute name="psrId" type="xsd:int"
+																					use="required" />
+																				<xsd:attribute name="equipmentId"
+																					type="xsd:int" use="required" />
+																			</xsd:extension>
+																		</xsd:simpleContent>
+																	</xsd:complexType>
+																</xsd:element>
+																<xsd:element name="LNode" maxOccurs="unbounded">
+																	<xsd:complexType mixed="true">
+																		<xsd:sequence>
+																			<xsd:element name="Private" minOccurs="0">
+																				<xsd:complexType>
+																					<xsd:simpleContent>
+																						<xsd:extension base="xsd:string">
+																							<xsd:attribute name="lNodeContainerId"
+																								type="xsd:int" use="required" />
+																							<xsd:attribute name="lNodeId" type="xsd:int"
+																								use="required" />
+																						</xsd:extension>
+																					</xsd:simpleContent>
+																				</xsd:complexType>
+																			</xsd:element>
+																		</xsd:sequence>
+																		<xsd:attribute name="iedName"
+																			type="xsd:normalizedString" use="required" />
+																		<xsd:attribute name="ldInst"
+																			type="xsd:normalizedString" use="required" />
+																		<xsd:attribute name="prefix" type="xsd:string"
+																			use="required" />
+																		<xsd:attribute name="lnClass"
+																			type="xsd:normalizedString" use="required" />
+																		<xsd:attribute name="lnInst" type="xsd:int"
+																			use="required" />
+																		<xsd:attribute name="lnType"
+																			type="xsd:normalizedString" use="required" />
+																	</xsd:complexType>
+																</xsd:element>
+																<xsd:element name="Terminal" minOccurs="0">
+																	<xsd:complexType mixed="true">
+																		<xsd:sequence>
+																			<xsd:element name="Private" minOccurs="0">
+																				<xsd:complexType>
+																					<xsd:simpleContent>
+																						<xsd:extension base="xsd:string">
+																							<xsd:attribute name="abstractConductingEquipmentId"
+																								type="xsd:int" use="required" />
+																							<xsd:attribute name="terminalId"
+																								type="xsd:int" use="required" />
+																							<xsd:attribute name="connectivityNodeId"
+																								type="xsd:int" use="required" />
+																						</xsd:extension>
+																					</xsd:simpleContent>
+																				</xsd:complexType>
+																			</xsd:element>
+																		</xsd:sequence>
+																		<xsd:attribute name="name" type="xsd:string"
+																			use="required" />
+																		<xsd:attribute name="connectivityNode"
+																			type="xsd:normalizedString" use="required" />
+																		<xsd:attribute name="substationName"
+																			type="xsd:normalizedString" use="required" />
+																		<xsd:attribute name="voltageLevelName"
+																			type="xsd:normalizedString" use="required" />
+																		<xsd:attribute name="bayName"
+																			type="xsd:normalizedString" use="required" />
+																		<xsd:attribute name="cNodeName"
+																			type="xsd:normalizedString" use="required" />
+																	</xsd:complexType>
+																</xsd:element>
+															</xsd:sequence>
+															<xsd:attribute name="type" type="xsd:normalizedString"
+																use="required" />
+															<xsd:attribute name="virtual" type="xsd:boolean"
+																use="required" />
+															<xsd:attribute name="name" type="xsd:normalizedString"
+																use="required" />
+															<xsd:attribute name="desc" type="xsd:string"
+																use="required" />
+														</xsd:complexType>
+													</xsd:element>
+													<xsd:element name="ConnectivityNode" maxOccurs="unbounded">
+														<xsd:complexType mixed="true">
+															<xsd:sequence>
+																<xsd:element name="Private" minOccurs="0">
+																	<xsd:complexType>
+																		<xsd:simpleContent>
+																			<xsd:extension base="xsd:string">
+																				<xsd:attribute name="lNodeContainerId"
+																					type="xsd:int" use="required" />
+																				<xsd:attribute name="bayId" type="xsd:int"
+																					use="required" />
+																				<xsd:attribute name="connectivityNodeId"
+																					type="xsd:int" use="required" />
+																			</xsd:extension>
+																		</xsd:simpleContent>
+																	</xsd:complexType>
+																</xsd:element>
+															</xsd:sequence>
+															<xsd:attribute name="pathName" type="xsd:normalizedString"
+																use="required" />
+															<xsd:attribute name="name" type="xsd:normalizedString"
+																use="required" />
+														</xsd:complexType>
+													</xsd:element>
+												</xsd:sequence>
+												<xsd:attribute name="name" type="xsd:normalizedString"
+													use="required" />
+												<xsd:attribute name="desc" type="xsd:string"
+													use="required" />
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+									<xsd:attribute name="name" type="xsd:normalizedString"
+										use="required" />
+									<xsd:attribute name="desc" type="xsd:string" use="required" />
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+						<xsd:attribute name="name" type="xsd:normalizedString"
+							use="required" />
+						<xsd:attribute name="desc" type="xsd:string" use="required" />
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Communication" minOccurs="0">
+					<xsd:complexType mixed="true">
+						<xsd:sequence>
+							<xsd:element name="SubNetwork" minOccurs="0">
+								<xsd:complexType mixed="true">
+									<xsd:sequence>
+										<xsd:element name="BitRate" minOccurs="0">
+											<xsd:complexType>
+												<xsd:simpleContent>
+													<xsd:extension base="xsd:string">
+														<xsd:attribute name="unit" type="xsd:normalizedString"
+															use="required" />
+													</xsd:extension>
+												</xsd:simpleContent>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="ConnectedAP" maxOccurs="unbounded">
+											<xsd:complexType mixed="true">
+												<xsd:sequence>
+													<xsd:element name="Address" minOccurs="0">
+														<xsd:complexType mixed="true">
+															<xsd:sequence>
+																<xsd:element name="P" maxOccurs="unbounded">
+																	<xsd:complexType>
+																		<xsd:simpleContent>
+																			<xsd:extension base="xsd:normalizedString">
+																				<xsd:attribute name="type"
+																					type="xsd:normalizedString" use="required" />
+																			</xsd:extension>
+																		</xsd:simpleContent>
+																	</xsd:complexType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+												</xsd:sequence>
+												<xsd:attribute name="iedName" type="xsd:normalizedString"
+													use="required" />
+												<xsd:attribute name="apName" type="xsd:normalizedString"
+													use="required" />
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+									<xsd:attribute name="name" type="xsd:normalizedString"
+										use="required" />
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="IED" maxOccurs="unbounded">
+					<xsd:complexType mixed="true">
+						<xsd:sequence>
+							<xsd:element name="Services" minOccurs="0">
+								<xsd:complexType mixed="true">
+									<xsd:sequence>
+										<xsd:element name="DynAssociation" minOccurs="0"
+											type="xsd:string" />
+										<xsd:element name="GetDirectory" minOccurs="0"
+											type="xsd:string" />
+										<xsd:element name="GetDataObjectDefinition"
+											minOccurs="0" type="xsd:string" />
+										<xsd:element name="GetDataSetValue" minOccurs="0"
+											type="xsd:string" />
+										<xsd:element name="DataSetDirectory" minOccurs="0"
+											type="xsd:string" />
+										<xsd:element name="ConfDataSet" minOccurs="0">
+											<xsd:complexType>
+												<xsd:simpleContent>
+													<xsd:extension base="xsd:string">
+														<xsd:attribute name="maxAttributes" type="xsd:int"
+															use="required" />
+														<xsd:attribute name="max" type="xsd:int"
+															use="required" />
+													</xsd:extension>
+												</xsd:simpleContent>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="ReadWrite" minOccurs="0"
+											type="xsd:string" />
+										<xsd:element name="GetCBValues" minOccurs="0"
+											type="xsd:string" />
+										<xsd:element name="ReportSettings" minOccurs="0">
+											<xsd:complexType>
+												<xsd:simpleContent>
+													<xsd:extension base="xsd:string">
+														<xsd:attribute name="rptID" type="xsd:normalizedString"
+															use="required" />
+														<xsd:attribute name="optFields" type="xsd:normalizedString"
+															use="required" />
+														<xsd:attribute name="bufTime" type="xsd:normalizedString"
+															use="required" />
+														<xsd:attribute name="trgOps" type="xsd:normalizedString"
+															use="required" />
+														<xsd:attribute name="intgPd" type="xsd:normalizedString"
+															use="required" />
+														<xsd:attribute name="cbName" type="xsd:normalizedString"
+															use="required" />
+														<xsd:attribute name="datSet" type="xsd:normalizedString"
+															use="required" />
+													</xsd:extension>
+												</xsd:simpleContent>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="FileHandling" minOccurs="0"
+											type="xsd:string" />
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="AccessPoint" minOccurs="0">
+								<xsd:complexType mixed="true">
+									<xsd:sequence>
+										<xsd:element name="Server" minOccurs="0">
+											<xsd:complexType mixed="true">
+												<xsd:sequence>
+													<xsd:element name="Authentication" minOccurs="0">
+														<xsd:complexType>
+															<xsd:simpleContent>
+																<xsd:extension base="xsd:string">
+																	<xsd:attribute name="none" type="xsd:boolean"
+																		use="required" />
+																	<xsd:attribute name="password" type="xsd:boolean"
+																		use="required" />
+																	<xsd:attribute name="weak" type="xsd:boolean"
+																		use="required" />
+																	<xsd:attribute name="strong" type="xsd:boolean"
+																		use="required" />
+																	<xsd:attribute name="certificate" type="xsd:boolean"
+																		use="required" />
+																</xsd:extension>
+															</xsd:simpleContent>
+														</xsd:complexType>
+													</xsd:element>
+													<xsd:element name="LDevice" maxOccurs="unbounded">
+														<xsd:complexType mixed="true">
+															<xsd:sequence>
+																<xsd:element name="LN0" minOccurs="0">
+																	<xsd:complexType mixed="true">
+																		<xsd:sequence>
+																			<xsd:element name="DOI" maxOccurs="unbounded">
+																				<xsd:complexType mixed="true">
+																					<xsd:sequence>
+																						<xsd:element name="DAI" maxOccurs="unbounded">
+																							<xsd:complexType mixed="true">
+																								<xsd:sequence>
+																									<xsd:element name="Val" minOccurs="0"
+																										type="xsd:normalizedString" />
+																								</xsd:sequence>
+																								<xsd:attribute name="name"
+																									type="xsd:normalizedString" use="required" />
+																								<xsd:attribute name="desc" type="xsd:string"
+																									use="required" />
+																							</xsd:complexType>
+																						</xsd:element>
+																					</xsd:sequence>
+																					<xsd:attribute name="name"
+																						type="xsd:normalizedString" use="required" />
+																					<xsd:attribute name="desc" type="xsd:string"
+																						use="required" />
+																				</xsd:complexType>
+																			</xsd:element>
+																		</xsd:sequence>
+																		<xsd:attribute name="lnClass"
+																			type="xsd:normalizedString" use="required" />
+																		<xsd:attribute name="inst" type="xsd:string"
+																			use="required" />
+																		<xsd:attribute name="lnType"
+																			type="xsd:normalizedString" use="required" />
+																		<xsd:attribute name="desc" type="xsd:string"
+																			use="required" />
+																	</xsd:complexType>
+																</xsd:element>
+																<xsd:element name="LN" maxOccurs="unbounded">
+																	<xsd:complexType mixed="true">
+																		<xsd:sequence>
+																			<xsd:element name="DOI" minOccurs="0">
+																				<xsd:complexType mixed="true">
+																					<xsd:sequence>
+																						<xsd:element name="DAI" minOccurs="0">
+																							<xsd:complexType mixed="true">
+																								<xsd:sequence>
+																									<xsd:element name="Val" minOccurs="0"
+																										type="xsd:int" />
+																								</xsd:sequence>
+																								<xsd:attribute name="name"
+																									type="xsd:normalizedString" use="required" />
+																								<xsd:attribute name="desc" type="xsd:string"
+																									use="required" />
+																							</xsd:complexType>
+																						</xsd:element>
+																					</xsd:sequence>
+																					<xsd:attribute name="name"
+																						type="xsd:normalizedString" use="required" />
+																					<xsd:attribute name="desc" type="xsd:string"
+																						use="required" />
+																				</xsd:complexType>
+																			</xsd:element>
+																		</xsd:sequence>
+																		<xsd:attribute name="prefix" type="xsd:string"
+																			use="required" />
+																		<xsd:attribute name="lnClass"
+																			type="xsd:normalizedString" use="required" />
+																		<xsd:attribute name="inst" type="xsd:int"
+																			use="required" />
+																		<xsd:attribute name="lnType"
+																			type="xsd:normalizedString" use="required" />
+																		<xsd:attribute name="desc" type="xsd:string"
+																			use="required" />
+																	</xsd:complexType>
+																</xsd:element>
+															</xsd:sequence>
+															<xsd:attribute name="inst" type="xsd:normalizedString"
+																use="required" />
+															<xsd:attribute name="desc" type="xsd:string"
+																use="required" />
+														</xsd:complexType>
+													</xsd:element>
+												</xsd:sequence>
+												<xsd:attribute name="timeout" type="xsd:int"
+													use="required" />
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+									<xsd:attribute name="name" type="xsd:normalizedString"
+										use="required" />
+									<xsd:attribute name="router" type="xsd:boolean"
+										use="required" />
+									<xsd:attribute name="clock" type="xsd:boolean"
+										use="required" />
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+						<xsd:attribute name="name" type="xsd:normalizedString"
+							use="required" />
+						<xsd:attribute name="manufacturer" type="xsd:normalizedString"
+							use="required" />
+						<xsd:attribute name="configVersion" type="xsd:decimal"
+							use="required" />
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="DataTypeTemplates" minOccurs="0">
+					<xsd:complexType mixed="true">
+						<xsd:sequence>
+							<xsd:element name="LNodeType" maxOccurs="unbounded">
+								<xsd:complexType mixed="true">
+									<xsd:sequence>
+										<xsd:element name="DO" maxOccurs="unbounded">
+											<xsd:complexType>
+												<xsd:simpleContent>
+													<xsd:extension base="xsd:string">
+														<xsd:attribute name="name" type="xsd:normalizedString"
+															use="required" />
+														<xsd:attribute name="type" type="xsd:normalizedString"
+															use="required" />
+														<xsd:attribute name="desc" type="xsd:normalizedString"
+															use="required" />
+													</xsd:extension>
+												</xsd:simpleContent>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+									<xsd:attribute name="iedType" type="xsd:string"
+										use="required" />
+									<xsd:attribute name="lnClass" type="xsd:normalizedString"
+										use="required" />
+									<xsd:attribute name="id" type="xsd:normalizedString"
+										use="required" />
+									<xsd:attribute name="desc" type="xsd:normalizedString"
+										use="required" />
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="DOType" maxOccurs="unbounded">
+								<xsd:complexType mixed="true">
+									<xsd:sequence>
+										<xsd:element name="DA" maxOccurs="unbounded">
+											<xsd:complexType>
+												<xsd:simpleContent>
+													<xsd:extension base="xsd:string">
+														<xsd:attribute name="fc" type="xsd:normalizedString"
+															use="required" />
+														<xsd:attribute name="dchg" type="xsd:boolean"
+															use="required" />
+														<xsd:attribute name="qchg" type="xsd:boolean"
+															use="required" />
+														<xsd:attribute name="dupd" type="xsd:boolean"
+															use="required" />
+														<xsd:attribute name="name" type="xsd:normalizedString"
+															use="required" />
+														<xsd:attribute name="bType" type="xsd:normalizedString"
+															use="required" />
+														<xsd:attribute name="type" type="xsd:normalizedString"
+															use="required" />
+													</xsd:extension>
+												</xsd:simpleContent>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+									<xsd:attribute name="iedType" type="xsd:string"
+										use="required" />
+									<xsd:attribute name="cdc" type="xsd:normalizedString"
+										use="required" />
+									<xsd:attribute name="id" type="xsd:normalizedString"
+										use="required" />
+									<xsd:attribute name="desc" type="xsd:string" use="required" />
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="DAType" maxOccurs="unbounded">
+								<xsd:complexType mixed="true">
+									<xsd:sequence>
+										<xsd:element name="BDA" minOccurs="0">
+											<xsd:complexType>
+												<xsd:simpleContent>
+													<xsd:extension base="xsd:string">
+														<xsd:attribute name="name" type="xsd:normalizedString"
+															use="required" />
+														<xsd:attribute name="bType" type="xsd:normalizedString"
+															use="required" />
+													</xsd:extension>
+												</xsd:simpleContent>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+									<xsd:attribute name="iedType" type="xsd:string"
+										use="required" />
+									<xsd:attribute name="id" type="xsd:normalizedString"
+										use="required" />
+									<xsd:attribute name="desc" type="xsd:string" use="required" />
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="EnumType" maxOccurs="unbounded">
+								<xsd:complexType mixed="true">
+									<xsd:sequence>
+										<xsd:element name="EnumVal" maxOccurs="unbounded">
+											<xsd:complexType>
+												<xsd:simpleContent>
+													<xsd:extension base="xsd:normalizedString">
+														<xsd:attribute name="ord" type="xsd:int"
+															use="required" />
+													</xsd:extension>
+												</xsd:simpleContent>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+									<xsd:attribute name="id" type="xsd:normalizedString"
+										use="required" />
+									<xsd:attribute name="desc" type="xsd:string" use="required" />
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
